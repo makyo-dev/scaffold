@@ -1,0 +1,26 @@
+{
+  "name": "scaffold",
+  "description": "scaffold with harp and gulp",
+  "main": "index.js",
+  "authors": [
+    "makyo"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "scaffold",
+    "harp",
+    "gulp"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

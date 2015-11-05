@@ -1,0 +1,54 @@
+/* --------------------------------------------------------
+Useful stylus library
+
+author: Saltykov Oleg
+email: mail@makyo.ru
+----------------------------------------------------------*/
+
+// px to em
+em(size, base = 16)
+	round(unit(size/base, 'em'), 3)
+
+fontFace(family)
+	file = '../fonts/' + family + '/' + family
+	font-family: family
+	@font-face
+		src url(file + '.eot?') format('eot')
+		src url(file + '.ttf') format('woff')
+		src url(file + '.woff') format('truetype')
+
+// Note: change parent position to relative
+align(position = both)
+	position absolute
+	if position is both
+		top 50%; left 50%
+		transform translate(-50%, -50%)
+	else if position is h
+		left 50%; transform translate(-50%, 0)
+	else if position is v
+		top 50%; transform translate(0, -50%)
+
+// Use mixin in footer
+stickyFooter(size)
+	min-height 100%
+	margin-bottom (- size)
+	&:after
+		content ""
+		display block
+		height size
+
+circular(outline = none, color = rgba(0,0,0,0.15))
+	border-radius 50%
+	if outline is not none
+		box-shadow 0 0 0 outline color
+
+// circular image
+circularImg(url, outline = none, color = rgba(0,0,0,0.15))
+	background-image url(url)
+	background-repeat no-repeat
+	background-position 50% 50%
+	border-radius 50%
+	overflow hidden
+	background-size cover
+	if outline is not none
+		box-shadow 0 0 0 outline color

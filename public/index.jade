@@ -1,0 +1,20 @@
+extends layout
+
+block header
+	title Title
+
+block css
+	link(rel="stylesheet", type="text/css", href=cdn['Noto Sans'])
+	// build:css assets/css/index.css
+	link(rel="stylesheet", type="text/css", href="css/pure.css")
+	link(rel="stylesheet", type="text/css", href="css/index.css")
+	// endbuild
+
+block content
+	
+
+block js
+	// build:js assets/js/index.js
+	script(type="application/javascript", src=bower['jquery'])
+	script(type="application/javascript", src="js/index.js")
+	// endbuild
