@@ -12,7 +12,7 @@ using **Jade**, **Stylus**, **CoffeeScript** as is
 
 localhost:9000
 
-    harp server
+    bower install && harp server
 
 ### Build
 
